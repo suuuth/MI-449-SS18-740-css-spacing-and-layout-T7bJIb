@@ -2,36 +2,27 @@
 var next = document.getElementById('next')
 var prev = document.getElementById('previous')
 var pages = document.getElementsByTagName('main')
-var x = pages.length - 1
+var x = pages.length
+var p = 0
 
-pages[0].style.display="flex"
+$('main').each(function(){
+  $(this).hide();
+});
 
-if ( x => 3 ) {
-  next.style.display="none"
-} else {
-  next.style.display="inline"
-}
+pages[p].style.display="flex"
 
 next.addEventListener('click', function () {
-  x++
-  if ( x => 3 ) {
-    next.style.display="none"
-    prev.style.display="inline"
-  } else {
-    next.style.display="inline"
-    prev.style.display="inline"
+  p++
+  if ( p > 2 ) {
+    p = 0
   }
   setPage()
 })
 
 prev.addEventListener('click', function () {
-  x--
-  if ( x == 0 ) {
-    prev.style.display="none"
-    next.style.display="inline"
-  } else {
-    prev.style.display="inline"
-    next.style.display="inline"
+  p--
+  if ( p < 0 ) {
+    p = 2
   }
   setPage()
 })
@@ -40,5 +31,5 @@ function setPage () {
   $('main').each(function(){
     $(this).hide();
   });
-  pages[x].style.display="flex"
+  pages[p].style.display="flex"
 }
