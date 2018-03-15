@@ -13,7 +13,7 @@ pages[p].style.display="flex"
 
 next.addEventListener('click', function () {
   p++
-  if ( p > 2 ) {
+  if ( p > 1 ) {
     p = 0
   }
   setPage()
@@ -22,7 +22,7 @@ next.addEventListener('click', function () {
 prev.addEventListener('click', function () {
   p--
   if ( p < 0 ) {
-    p = 2
+    p = 1
   }
   setPage()
 })
