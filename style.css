@@ -1,5 +1,6 @@
-/*colors at https://coolors.co/202a25-b80c09-0b4f6c-ecf1f6-333333*/
-html  {
+  /*colors at https://coolors.co/202a25-b80c09-0b4f6c-ecf1f6-333333*/
+
+html {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -14,7 +15,7 @@ body {
   font-weight: 300;
 }
 
-p, ul, li {
+p,ul,li {
   font-size: 18px;
 }
 
@@ -25,14 +26,14 @@ nav {
 nav a img {
   cursor: pointer;
   padding: 20px;
-  margin:0;
+  margin: 0;
 }
 
-nav a > img:hover {
+nav a>img:hover {
   background-color: #0b4f6c;
 }
 
-nav > a:nth-child(2) > img {
+nav>a:nth-child(2) > img {
   position: absolute;
   right: 0;
   transform: rotate(180deg);
@@ -46,456 +47,76 @@ header {
   text-align: center;
 }
 
-div#wrap {
+main#wrap {
   position: relative;
   min-height: 500px;
   margin: 25px 8% 100px;
   overflow: hidden;
 }
 
-main#two-column, main#search-page, main.search-results {
+article#two-column,
+article#search-page {
   display: none;
 }
 
-main#two-column article {
+article#two-column article {
   display: flex;
   flex-direction: row;
 }
 
-main#two-column article section {
+article#two-column article section {
   margin-right: 9%;
 }
 
-main#two-column article section, main#two-column article figure {
+article#two-column article section,
+article#two-column article figure {
   display: inline-block;
   width: 45%;
 }
 
-main#two-column article figure {
+article#two-column article figure {
   margin: 0;
 }
 
-main#two-column article figure img {
+article#two-column article figure img {
   max-width: 100%;
   max-height: 100%;
 }
 
-main#two-column article figure figcaption ul {
+article#two-column article figure figcaption ul {
   list-style: none;
   margin: 10px 0;
   padding: 0 20px;
 }
 
-main#two-column article figure figcaption ul li {
+article#two-column article figure figcaption ul li {
   margin: 5px 0;
   padding: 10px;
-
 }
 
-main#search-page article {
+article#search-page {
   text-align: center;
   width: 100%;
 }
 
-main#search-page article section {
+article#search-page section {
   margin: 25px auto;
   width: 60%;
 }
 
-main#search-page article section input {
+article#search-page section input {
   box-sizing: border-box;
   width: 100%;
   padding: 0;
 }
 
-main#search-page article div div {
+article#search-page div div {
   display: inline-block;
   background-color: #ecf1f6;
   color: #333333;
   padding: 5px;
   margin: 0 10px;
   cursor: pointer;
-}
-
-main.search-results div.filter-menu {
-  background-color: #fcfcfc;
-  border: 2px solid rgba(26,26,26,0.05);
-  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.05);
-  height: 100%;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: -270px;
-  bottom: 0;
-  padding-right: 10px;
-  transition: 400ms;
-  width: 258px;
-  z-index: 1;
-}
-
-main.search-results div.filter-menu h3 {
-  padding: 35px 10px;
-}
-
-main.search-results div.filter-menu ul {
-  list-style: none;
-  padding-left: 10px;
-}
-
-main.search-results div.filter-menu ul li.filter-cat {
-  cursor: pointer;
-  font-size: 16px;
-  padding: 15px 0;
-  position: relative;
-  transition: 200ms;
-  z-index: 0;
-}
-
-main.search-results div.filter-menu ul li.filter-cat span img {
-  margin-bottom: 2px;
-}
-
-main.search-results ul#submenu {
-  display: none;
-  font-size: 16px;
-}
-
-main.search-results ul#submenu li {
-  padding: 3px 0;
-}
-
-main.search-results ul#submenu li label {
-  cursor: pointer;
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-main.search-results ul#submenu li label input {
-  cursor: pointer;
-  position: absolute;
-  opacity: 0;
-}
-
-main.search-results ul#submenu li label p {
-  font-size: 14px;
-  padding-top: 5px;
-}
-
-main.search-results ul#submenu li label span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 20px;
-  width: 20px;
-  background-color: #eee;
-}
-
-main.search-results ul#submenu li label:hover input ~ span {  /* on mouse-over, change background color */
-  background-color: #ccc;
-}
-
-main.search-results ul#submenu li label input:checked ~ span {    /* when checked, add background color */
-  background-color: $sub-base;
-}
-
-main.search-results ul#submenu li span:after {   /* create the checkmark/indicator (hidden when not checked) */
-  content: "";
-  position: absolute;
-  display: none;
-}
-
-main.search-results ul#submenu li label input:checked ~ span:after {  /* show checkmark when checked */
-  display: block;
-}
-
-main.search-results ul#submenu li label input:checked ~ p {   /* change label text color when checked */
-  color: $sub-base;
-}
-
-main.search-results ul#submenu li label span:after {  /* style the checkmark/indicator */
-  left: 6px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border: solid #ffffff;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-main.search-results ul#submenu.show {
-  display: block;
-}
-
-main.search-results .filter-menu.show {
-  left: 0;
-}
-  
-main.search-results span.align-left {
-  position: absolute;
-  left: 0;
-}
-
-main.search-results span.align-right {
-  position: absolute;
-  right: 0;
-  transition: 400ms;
-}
-
-main.search-results span.align-right.show {
-  transform: rotate(180deg);
-}
-
-main.search-results span.table-view, span.grid-view {
-  opacity: 0.5;
-}
-
-main.search-results span.table-view.show, span.grid-view.show {
-  opacity: 1;
-}
-
-main.search-results .searchResults {
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 50px;
-  position: relative;
-  transition: 100ms;
-  vertical-align: top;
-  width: 1000px;
-}
-
-main.search-results .searchResults #search-result-controls {
-  padding: 50px 5% 25px;
-  position: relative;
-  text-align: center;
-  width:90%;
-}
-
-main.search-results .searchResults #search-result-controls span {
-  cursor: pointer;
-}
-
-main.search-results .searchResults #search-result-controls span img {
-  transition: 400ms;
-}
-
-main.search-results .searchResults #search-result-controls span img.show {
-  transform: rotate(-180deg);
-}
-
-main.search-results .searchResults #search-result-controls ul {
-  background: $base-dark;
-  border-radius: 25px;
-  color: $base-light;
-  display: none;
-  list-style: none;
-  margin: 10px auto 0;
-  padding: 20px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  width: fit-content;
-  z-index: 1;
-}
-
-main.search-results .searchResults #search-result-controls ul li {
-  cursor: pointer;
-  padding: 5px 3px;
-}
-
-main.search-results .searchResults #search-result-controls ul li:hover {
-  background: $base-light;
-  color: $base-dark;
-}
-
-main.search-results .searchResults #search-result-controls ul.show {
-  display: block;
-}
-
-main.search-results .searchResults #search-result-configure-download-row {
-  padding: 25px 5% 50px;
-  position: relative;
-  width: 90%;
-}
-
-main.search-results .searchResults #search-result-configure-download-row span {
-  cursor: pointer;
-}
-
-main.search-results .searchResults #search-result-configure-download-row .align-right b {
-  cursor: default;
-}
-
-main.search-results .searchResults div#search-result-wrap {
-  position: relative;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table {
-  margin-left: 200px;
-  overflow: auto;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table {
-  background-color: rgba(39, 173, 136, 0.1);
-  border-collapse:collapse;
-  border: 1px solid rgba(13,18,48,0.1);
-  border-left: 0;
-  font-size: 14px;
-  overflow: hidden;
-  text-align: justify;
-  width: 100%;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table th {
-  background-color: #fff;
-  font-weight: 500;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table th, main.search-results .searchResults div#search-result-wrap #search-result-table table td {
-  border: none;
-  cursor: pointer;
-  padding-top: 20px 2px 20px 2%;
-  margin: 0;
-  white-space: nowrap;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody {
-  overflow: auto;
-  vertical-align: top;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr span.first {
-  display: none;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr span.meta {
-  display: inline;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr th:first-child, main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr td:first-child {
-  background-color: #fff;
-  border: 1px solid rgba(13,18,48,0.1);
-  border-top: 0;
-  border-right: 0;
-  border-bottom: 0;
-  box-sizing: border-box;
-  margin-bottom: 1px;
-  position: absolute;
-  top: auto;
-  left: 0;
-  width: 200px;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr th:first-child {
-  border-top: 1px solid rgba(13,18,48,0.1);
-  border-bottom: 1px solid rgba(13,18,48,0.1);
-  top: 0;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr td:last-child {
-  display: none;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr a {
-  color: $base-dark;
-  font-size: 18px;
-  text-decoration: none;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr a:hover {
-  cursor: pointer;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr:last-child td:first-child {
-  border-bottom: 1px solid rgba(13,18,48,0.1);
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr:hover td {
-  background-color: rgba(39,173,136,0.15);
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid {
-  margin-top: 15px;
-  margin-left: 0;
-  white-space: normal;
-  overflow: visible;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid {
-  background-color: inherit;
-  border: none;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tbody.grid {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tbody.grid tr.grid:first-child {
-  display: none;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tbody.grid tr.grid {
-  border: 2px solid rgba(13,18,48,0.1);
-  box-sizing: border-box;
-  box-shadow: 0 2px 3px 0 rgba(30,30,30,0.05);
-  display: inline-block;
-  height: 275px;
-  margin: 10px 5px;
-  padding: 5px 10px;
-  position: relative;
-  width: 240px;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tbody.grid tr.grid td.grid:first-child {
-  border: 0;
-  background: inherit;
-  font-size: 24px;
-  line-height: 2;
-  position: relative;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tbody.grid tr.grid td.grid {
-  display: block;
-  padding: 10px 2%;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tbody.grid tr.grid td:last-child {
-  position: absolute;
-  bottom: 0;
-  left: 10px;
-  padding: 10px 2% 20px;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tbody.grid tr.grid td:last-child a {
-  box-sizing: border-box;
-  padding: 230px 85px 15px 0;
-  transition: 400ms;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tbody.grid tr.grid span.first.grid {
-  display: inline;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tbody.grid tr.grid span.meta.grid {
-  display: none;
-}
-
-main.search-results .searchResults div#search-result-wrap #search-result-table.grid table.grid tr:hover td {
-  background-color: inherit;
-}
-
-main.search-results .searchResults.show {
-  margin-left: 290px;
 }
 
 footer {
@@ -506,97 +127,22 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 1210px) {
-  main.search-results .searchResults, .searchResults.show {
-    width: 95%;
-}
-
-@media screen and (max-width: 935px){
-  main.search-results .searchResults div#search-result-wrap #search-result-table {
-    margin-left: 145px;
-  }
-  main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr th:first-child,td:first-child {
-    width: 145px;
-  }
-}
-
-@media screen and (max-width: 820px){    
-  main.search-results .searchResults #search-result-table.grid {
-    margin: 0 auto;
-    width: 750px;
-  }
-    
-  main.search-results .searchResults.show #search-result-table.grid {
-    width: 500px;
-  }
-  main.search-results .filter-menu {
-    height: min-content;
-  }
-  main.search-results .filter-menu.show {
-    top: 80px;
-    left: 30px;
-    padding: 0 20px;
-  }
-}
-
-@media screen and (max-width: 770px){
-  main.search-results .searchResults #search-result-table.grid {
-    width: auto;
-  }
-  main.search-results .searchResults #search-result-table.grid table.grid tbody.grid tr.grid {
-    display: block;
-    margin: 10px auto;
-    width: 95%;
-  }
-}
-
 @media only screen and (max-width: 768px) {
-  
-  main#two-column article {
+
+  article#two-column article {
     flex-wrap: wrap;
   }
 
-  main#two-column article section {
+  article#two-column article section {
     margin-right: 0;
   }
 
-  main#two-column article figure {
+  article#two-column article figure {
     margin-top: 40px;
   }
 
-  main#two-column article section, main#two-column article figure {
+  article#two-column article section,
+  article#two-column article figure {
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 620px) {
-  main.search-results .searchResults div#search-result-wrap #search-result-table {
-    margin-left: 135px;
-  }
-  main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr th:first-child,main.search-results .searchResults div#search-result-wrap #search-result-table table tbody tr td:first-child {
-    width: 135px;
-  }
-}
-
-@media screen and (max-width: 535px) {
-  main.search-results .searchResults #search-result-controls {
-    padding: 50px 5% 45px;
-  }
-  main.search-results .searchResults #search-result-controls .align-center {
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-  }
-  main.search-results .searchResults #search-result-controls .align-center ul {
-    margin: 0;
-    top: 110px;
-  }
-  main.search-results .searchResults #search-result-controls .align-center ul #search-result-configure-download-row {
-    padding: 25px 5% 65px;
-  }
-  main.search-results .searchResults #search-result-controls .align-center ul #search-result-configure-download-row .align-right {
-    right: unset;
-    left: 0;
-    bottom: 20px;
   }
 }

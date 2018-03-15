@@ -1,10 +1,10 @@
 // page nav
 var next = document.getElementById('next')
 var prev = document.getElementById('previous')
-var pages = document.getElementsByTagName('main')
+var pages = document.getElementsByTagName('article')
 var p = 0
 
-$('main').each(function(){
+$('article').each(function(){
   $(this).hide();
 });
 
@@ -27,8 +27,12 @@ prev.addEventListener('click', function () {
 })
 
 function setPage () {
-  $('main').each(function () {
+  $('article').each(function () {
     $(this).hide();
   });
-  pages[p].style.display = 'flex'
+  if (p == 0) {
+    pages[p].style.display = 'flex'
+  } else {
+    pages[p].style.display = 'block'
+  }
 }
